@@ -1,0 +1,27 @@
+Linux Shell
+
+1. echo "Hello World!" is like print("Hello World!")
+
+2. Putting $USER or $PWD in the string will show the user's name and current directory respectively
+
+3. A shellscript should start with a line such as the following:
+#!/bin/bash
+This indicates that the script should be run in the bash shell regardless of which interactive shell the user has chosen. This is very important, since the syntax of different shells can vary greatly.
+
+4. In a bash script, anything following a pound sign # (besides the shell name on the first line) is treated as a comment.
+
+5. You define a variable as follows: X="hello" **No space before or after =** and refer to it as follows: $X
+
+6. Shell essentially sees the command line as a pile of commands and command arguments seperated by spaces. foo=baris considered a command. The problem with foo = bar is the shell sees the word foo seperated by spaces and interprets it as a command.
+
+7. Variable names are exapnded within double quotes, but not single quotes. If you do not need to refer to variables, single quotes are used
+
+echo -n '$USER=' # **-n option stops echo from breaking the line**
+echo "$USER"
+output of the 2 lines above: $USER=elflord
+
+echo "\$USER=$USER"  # this does the same thing as the first two lines
+output of the line above: $USER=elflord
+
+
+*** For other info on bash refer to this source --> http://www.panix.com/~elflord/unix/bash-tute.html ***
