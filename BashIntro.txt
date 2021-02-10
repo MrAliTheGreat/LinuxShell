@@ -23,5 +23,62 @@ output of the 2 lines above: $USER=elflord
 echo "\$USER=$USER"  # this does the same thing as the first two lines
 output of the line above: $USER=elflord
 
+8. For variables that are empty strings or strings with space in them it's better to use "" to refer to the variable.
+$X -> in normal cases , "$X" -> in cases mentioned above
+
+9. -n also tests to see if the argument is non empty --> [-n "$X"] checks if var X is non empty (output: True) or not
+
+10. For refering to vars in strings it's better to use ${X} so it doesn't get mixed up with other chars.
+
+11. conditional statement syntax: ** conditions are put in [] **
+if condition1
+then
+	statement1
+elif condition2
+then
+	statement2
+else
+	statement3
+fi
+
+12. $X -lt $Y --> is $X less than $Y ---> "operand1<space>operator<space>operand2" spaces are mandatory
+
+13. -e "${HOME}/.fvwmrc" --> test to see if ~/.fvwmrc exists ---> -e is for checking the existence of some file
+															 ---> $HOME will show the home address of your linux
+
+14. -L "${HOME}/.fvwmrc" --> is the file in the provided directory a symlink?
+
+15. -f "${HOME}/.fvwmrc" --> is he file in the provided directory a regular file?
+
+16. You must wrap anything you wish to use for a -n test with quotes "".
+
+17. The for loop iterates the loop over the space seperated items. syntax below:
+colour1="red"
+colour2="light blue"
+colour3="dark green"
+for X in "$colour1" $colour2" $colour3"
+do
+	echo $X
+done
+
+18. echo * --> Lists all the files and directories in the current directory.
+
+19. echo ${HOME}/public_html/*.jpg --> Lists all jpeg files in your public_html directory.
+
+20. While loop syntax:
+X=0
+while [ $X -le 20 ]
+do
+	echo $X
+	X=$((X+1))
+done
+
+21. Command Substitution enables you to take the output of a command and treat it as though it was written on the command line. For example, if you want to set the variable X to the output of a command, the way you do this is via command substitution.
+
+It's done in two ways: $(commands) --> expands to the output of commands --> BETTER
+					   `commands`  --> expands to the output of commands
+
+basically we will have the output of commands and we can do whatever we want with it.
+
 
 *** For other info on bash refer to this source --> http://www.panix.com/~elflord/unix/bash-tute.html ***
