@@ -80,6 +80,11 @@ It's done in two ways: $(commands) --> expands to the output of commands --> BET
 
 basically we will have the output of commands and we can do whatever we want with it.
 
+22. For getting input from user we can use read command as shown below:
+read number
+echo "The number you have entered is $number"
+if the user gives 85 as input the output will be --> The number you have entered is 85
+  
 
 *** For other info on bash refer to this source --> http://www.panix.com/~elflord/unix/bash-tute.html ***
 
