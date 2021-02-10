@@ -82,3 +82,13 @@ basically we will have the output of commands and we can do whatever we want wit
 
 
 *** For other info on bash refer to this source --> http://www.panix.com/~elflord/unix/bash-tute.html ***
+
+
+
+
+Making a file to execute multiple bash commands:
+
+1. Make the file with .sh format
+2. Put #!/bin/bash at the start of code
+3. Write your code
+4. To execute run bash FILENAME.sh in terminal
